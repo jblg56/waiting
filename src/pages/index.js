@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const pageStyles = {
   color: "#232129",
@@ -35,29 +35,38 @@ const linkStyle = {
 };
 
 const IndexPage = () => {
-  const [formHtml, setFormHtml] = useState("");
-
-  useEffect(() => {
-    const fetchFormHtml = async () => {
-      try {
-        const response = await fetch("https://fece86da.sibforms.com/serve/MUIFALCEOjJcFELySrQQLJAmJhKErRz3oFvIh2cysOUw5ZEY-byALLDuZyTMn2DAx-KEJvFevRbwou1mpueFqAjap5KQptrjD-RhkBaknsaYOtd_p5vLMGF4kIBHh6NA756fak3h92Y1xwVYKYEGjSjYubQbt7SO3EOEQzwUOq5aRUMKLgTAsClgPMJkadyoYYpzSV-gHMfGmX9r");
-        const html = await response.text();
-        setFormHtml(html);
-      } catch (error) {
-        console.error("Error fetching form:", error);
-      }
-    };
-
-    fetchFormHtml();
-  }, []);
-
   return (
     <main style={pageStyles}>
       <h1 style={headingStyles}>
         Bricolib est très visité en ce moment et nous limitons le nombre de visiteurs sur la plateforme. Pour ne pas rater votre place, inscrivez-vous sur ce formulaire : <br />
         <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
       </h1>
-      <div dangerouslySetInnerHTML={{ __html: formHtml }} />
+      <div class="sib-form" style={{ textAlign: "center", backgroundColor: "#EFF2F7" }}>
+        <div
+          id="sib-form-container"
+          class="sib-form-container"
+          style={{ maxWidth: "540px", borderRadius: "3px", borderColor: "#C0CCD9", borderStyle: "solid" }}
+        >
+          {/* Votre formulaire Brevo */}
+          <div id="error-message" class="sib-form-message-panel" style="font-size: 16px; text-align: left; font-family: Helvetica, sans-serif; color: #661d1d; background-color: #ffeded; border-radius: 3px; border-color: #ff4949; max-width: 540px;">
+            <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+              <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+              </svg>
+              <span class="sib-form-message-panel__inner-text">Nous n'avons pas pu confirmer votre inscription.</span>
+            </div>
+          </div>
+          <div id="success-message" class="sib-form-message-panel" style="font-size: 16px; text-align: left; font-family: Helvetica, sans-serif; color: #085229; background-color: #e7faf0; border-radius: 3px; border-color: #13ce66; max-width: 540px;">
+            <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+              <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+              </svg>
+              <span class="sib-form-message-panel__inner-text">Votre inscription est confirmée.</span>
+            </div>
+          </div>
+          {/* Fin de votre formulaire Brevo */}
+        </div>
+      </div>
       <iframe
         width="560"
         height="315"
