@@ -134,6 +134,7 @@ const IndexPage = () => {
       <p style={paragraphStyles}>
         Edit test <code style={codeStyles}>src/pages/index.js</code> to see this page
         update in real-time. 😎
+<iframe width="560" height="315" src="https://www.youtube.com/embed/21FfqgGV10Y?si=jKh7GoV-JW4CarBb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </p>
       <ul style={listStyles}>
         <li style={docLinkStyle}>
