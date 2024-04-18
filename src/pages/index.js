@@ -1,45 +1,11 @@
 import React from "react";
 
-const pageStyles = {
-  color: "#232129",
-  padding: 96,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-const headingAccentStyles = {
-  color: "#663399",
-};
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const listStyles = {
-  marginBottom: 96,
-  paddingLeft: 0,
-};
-const listItemStyles = {
-  fontWeight: 300,
-  fontSize: 24,
-  maxWidth: 560,
-  marginBottom: 30,
-};
-
-const linkStyle = {
-  color: "#8954A8",
-  fontWeight: "bold",
-  fontSize: 16,
-  verticalAlign: "5%",
-};
-
 const IndexPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>
+    <main style={{ color: "#232129", padding: 96, fontFamily: "-apple-system, Roboto, sans-serif, serif" }}>
+      <h1 style={{ marginTop: 0, marginBottom: 64, maxWidth: 320 }}>
         Bricolib est très visité en ce moment et nous limitons le nombre de visiteurs sur la plateforme. Pour ne pas rater votre place, inscrivez-vous sur ce formulaire : <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
+        <span style={{ color: "#663399" }}>— you just made a Gatsby site! 🎉🎉🎉</span>
       </h1>
       <div className="sib-form" style={{ textAlign: "center", backgroundColor: "#EFF2F7" }}>
         <div
@@ -47,7 +13,6 @@ const IndexPage = () => {
           className="sib-form-container"
           style={{ maxWidth: "540px", borderRadius: "3px", borderColor: "#C0CCD9", borderStyle: "solid" }}
         >
-          {/* Votre formulaire Brevo */}
           <div id="error-message" className="sib-form-message-panel" style={{ fontSize: "16px", textAlign: "left", fontFamily: "Helvetica, sans-serif", color: "#661d1d", backgroundColor: "#ffeded", borderRadius: "3px", borderColor: "#ff4949", maxWidth: "540px" }}>
             <div className="sib-form-message-panel__text sib-form-message-panel__text--center">
               <svg viewBox="0 0 512 512" className="sib-icon sib-notification__icon">
@@ -64,7 +29,6 @@ const IndexPage = () => {
               <span className="sib-form-message-panel__inner-text">Votre inscription est confirmée.</span>
             </div>
           </div>
-          {/* Fin de votre formulaire Brevo */}
         </div>
       </div>
       <iframe
